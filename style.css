@@ -32,7 +32,7 @@ body {
     pointer-events: none;
 }
 
-/* Regra geral para QUALQUER item que flutua (Emoji ou Forma) */
+/* Regra geral para qualquer item que flutua */
 .floating-item {
     position: absolute;
     opacity: 0.4; /* Sutil para não distrair a criança */
@@ -42,7 +42,7 @@ body {
     align-items: center;
 }
 
-/* --- Estilos específicos para as Formas --- */
+/* --- Estilos específicos para as formas --- */
 .shape.circle {
     width: 40px;
     height: 40px;
@@ -168,29 +168,29 @@ button:hover { transform: scale(1.05); background-color: #6da100; }
     overflow: hidden;
     position: relative;
     z-index: 5;
-    border: 2px solid rgba(0,0,0,0.05); /* Um detalhe para dar profundidade */
+    border: 2px solid rgba(0,0,0,0.05); 
 }
 
 #progress {
-    width: 0%; /* O JS vai mudar isso */
+    width: 0%; 
     height: 100%;
-    background-color: #82bc00; /* Verde Aprende Brasil */
-    transition: width 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efeito elástico */
+    background-color: #82bc00; 
+    transition: width 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border-radius: 20px;
 }
 
 #question-text {
-    font-size: 1rem; /* Um tamanho equilibrado */
+    font-size: 1rem; 
     font-weight: 600;
     color: var(--dark-text);
-    line-height: 1.4; /* Melhora o respiro entre as linhas do texto longo */
+    line-height: 1.4; 
     margin: 1rem 0;
 }
 
 /* Ajuste específico para Mobile (telas menores que 480px) */
 @media (max-width: 480px) {
     #question-text {
-        font-size: 1.1rem; /* Um pouco menor para caber melhor na tela do celular */
+        font-size: 1.1rem; 
         margin: 0.8rem 0;
     }
 }
@@ -285,11 +285,7 @@ button:hover { transform: scale(1.05); background-color: #6da100; }
     height: auto;
     display: block;
     margin: 0 auto 1.5rem;
-    
-    /* Aplica a animação infinita */
     animation: continuousBounce 2s ease-in-out infinite;
-    
-    /* Adiciona uma sombra suave que aumenta/diminui pode ser legal */
     filter: drop-shadow(0 5px 5px rgba(0,0,0,0.1));
     transition: filter 2s ease-in-out infinite;
 }
@@ -354,15 +350,27 @@ button:hover { transform: scale(1.05); background-color: #6da100; }
     }
 
     #question-text {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .option-btn {
         padding: 10px;
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     
     .quiz-img {
-        max-height: 150px; /* Reduz a imagem no mobile para sobrar espaço */
+        max-height: 150px; 
+    }
+
+    #boy-avatar {
+        width: 250px; 
+    }
+    
+    .boy-jumping {
+        width: 150px; 
+    }
+    
+    .character-container {
+        margin-bottom: 1rem;
     }
 }

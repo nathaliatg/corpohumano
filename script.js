@@ -2,8 +2,8 @@ const questions = [
     {
         text: "É COM ESSA PARTE DO CORPO QUE NÓS CONSEGUIMOS IR PRA LÁ E PRA CÁ. DÁ PRA ESTICAR, DOBRAR E ATÉ CRUZAR. QUAL PARTE DO CORPO É ESSA?",
         options: ["BRAÇO", "PERNA", "PESCOÇO"],
-        correct: 1, // PERNA
-        img: "img/pernas.png" // Use URLs de imagens reais aqui
+        correct: 1, 
+        img: "img/pernas.png" 
     },
     {
         text: "NESSA PARTE DO CORPO É LEGAL DE VER COMO SOMOS DIFERENTES. NELA, CARREGAMOS O NOSSO CABELO DO JEITINHO QUE ELE É, NOSSOS OLHOS DE TODAS AS CORES, ALÉM DA ORELHA E DO NARIZ QUE É SÓ NOSSO. QUAL PARTE DO CORPO É ESSA?",
@@ -115,7 +115,7 @@ next() {
             document.getElementById('screen-quiz').classList.remove('active');
             document.getElementById('screen-end').classList.add('active');
             
-            // 3. EFEITO DOS CONFETES (Duração de 3 segundos)
+            // 3. EFEITO DOS CONFETES 
             var duration = 3 * 1000;
             var end = Date.now() + duration;
 
@@ -141,7 +141,7 @@ next() {
                 if (Date.now() < end) { 
                     requestAnimationFrame(frame); 
                 }
-            }()); // O "()" aqui faz a função começar sozinha
+            }()); 
         }
     }
 }
