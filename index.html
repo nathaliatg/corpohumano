@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz do Corpo Humano - Aprende Brasil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+<div class="background-animation">
+    <div class="floating-item" style="top: 10%; left: 10%; font-size: 3rem;">⭐</div>
+    <div class="floating-item" style="top: 10%; left: 80%; font-size: 2.5rem;">📚</div>
+    <div class="floating-item" style="top: 64%; left: 20%; font-size: 2rem;">✏️</div>
+    <div class="floating-item" style="top: 30%; left: 85%; font-size: 2.5rem;">🌟</div>
+    <div class="floating-item" style="top: 60%; left: 70%; font-size: 2.5rem;">🍎</div>
+
+    <div class="floating-item shape circle" style="top: 60%; left: 95%;"></div>
+    <div class="floating-item shape triangle" style="top: 30%; left: 15%;"></div>
+    <div class="floating-item shape circle" style="top: 35%; left: 5%;"></div>
+    <div class="floating-item shape triangle" style="top: 45%; left: 75%;"></div>
+    <div class="floating-item shape triangle" style="top: 65%; left: 5%;"></div>
+</div>
+</div>
+    <main id="app">
+        <section id="screen-start" class="screen active">
+            <div class="card">
+                <div class="character-container">
+                    <img src="img/1.png" id="boy-avatar" alt="Menino acenando">
+                </div>
+                <h1>QUIZ DO CORPO HUMANO</h1>
+                <p>VAMOS BRINCAR DE DESCOBRIR O NOME DAS PARTES DO CORPO? OBSERVE AS IMAGENS E CLIQUE NA RESPOSTA CORRETA.</p>
+                <button onclick="quiz.start()">COMEÇAR ➜</button>
+            </div>
+        </section>
+
+        <section id="screen-quiz" class="screen">
+            <div class="progress-container"><div id="progress"></div></div>
+            <div class="card">
+                <div class="image-placeholder" id="question-image">
+                    </div>
+                <h2 id="question-text">Pergunta aqui?</h2>
+                <div id="options-container" class="options-grid">
+                    </div>
+            </div>
+        </section>
+
+        <div id="modal-feedback" class="modal">
+            <div class="modal-content">
+                <div id="feedback-icon"></div>
+                <p id="feedback-text"></p>
+                <button id="btn-next" onclick="quiz.next()">PRÓXIMA PERGUNTA</button>
+            </div>
+        </div>
+
+        <section id="screen-end" class="screen">
+    <div class="card">
+        <h2 class="titulo-final">PARABÉNS!</h2>
+        <div class="character-container">
+             <img src="img/2.png" style="width: 350px;" class="boy-jumping" alt="Menino comemorando">
+        </div>
+        <p class="mensagem-final">Você acertou todas as perguntas!</p>
+        <div class="botoes-finais">
+            <button onclick="location.reload()">JOGAR NOVAMENTE</button>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <div class="custom-shape-divider-bottom">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill="#9B51E0" fill-opacity="1" d="M0,224L60,202.7C120,181,240,139,360,149.3C480,160,600,224,720,229.3C840,235,960,181,1080,154.7C1200,128,1320,128,1380,128L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    </div>
+
+    <script src="script.js"></script>
+</body>
